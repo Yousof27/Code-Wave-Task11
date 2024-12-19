@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+:root {
+    --main-color: green;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+form {
+    width: 300px;
+    padding: 15px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #111;
+}
+
+.form-title {
+    font-size: 35px;
+    margin: 20px 0px;
+    text-align: center;
+    text-shadow: 0px 0px 10px var(--main-color), 0px 0px 20px var(--main-color), 0px 0px 40px var(--main-color), 0px 0px 80px var(--main-color);
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &[type="text"] {
+        background-color: #222;
+        color: white;
+    }
+
+    &[type="submit"] {
+        background-color: transparent;
+        border: 1px solid var(--main-color);
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--main-color);
+            color: white;
+        }
+    }
+}
+
+table {
+    min-width: 300px;
+    margin: 20px auto;
+    border: 1px solid var(--main-color);
+    border-spacing: 0px;
+}
+
+tr {
+    display: flex;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--main-color);
+    }
+}
+
+td {
+    padding: 15px;
+    color: #ccc;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        max-width: 550px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &:first-child {
+        width: 69px;
+        border-right: 1px solid var(--main-color);
+    }
+}
+
+@media (max-width: 656px) {
+    td {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    td {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            width: 210px;
+        }
+    }
+}
